@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF1A1A1A</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Vibrant Minimalist Palette -->
+    <color name="vibrant_blue">#007AFF</color>
+    <color name="vibrant_purple">#AF52DE</color>
+    <color name="vibrant_pink">#FF2D55</color>
+    <color name="vibrant_orange">#FF9500</color>
+    <color name="vibrant_teal">#5AC8FA</color>
+
+    <color name="bg_light">#FFFFFF</color>
+    <color name="bg_dark">#000000</color>
+
+    <!-- Refined Glass Effect -->
+    <color name="glass_white">#F2FFFFFF</color>
+    <color name="glass_dark">#1AFFFFFF</color>
+    <color name="glass_border">#1A000000</color>
+    <color name="glass_border_dark">#33FFFFFF</color>
+</resources>
