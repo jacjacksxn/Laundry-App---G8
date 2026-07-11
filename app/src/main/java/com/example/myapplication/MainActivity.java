@@ -2,13 +2,10 @@ package com.example.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
+import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,41 +13,38 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0); // Bottom padding handled by Nav
-            return insets;
-        });
 
-        // Service Clicks
-        findViewById(R.id.service_wash).setOnClickListener(v -> {
-            startActivity(new Intent(this, ServiceDetailActivity.class));
-        });
+        // Recommended RecyclerView
+        RecyclerView rvRecommended = findViewById(R.id.rv_recommended);
+        rvRecommended.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        rvRecommended.setAdapter(new RecommendedAdapter());
 
-        findViewById(R.id.service_dry).setOnClickListener(v -> {
-            startActivity(new Intent(this, ServiceDetailActivity.class));
-        });
+        // Navigation to OrdersActivity (Summary Screen)
+        // I'll add a listener to the search bar or a specific button if I had one
+        // For now, let's use the search bar's action to navigate to search in Orders
+        EditText searchServices = findViewById(R.id.search_services);
+        searchServices.setOnClickListener(v -> startActivity(new Intent(this, OrdersActivity.class)));
 
-        // Active Order Click
-        findViewById(R.id.active_order_card).setOnClickListener(v -> {
-            startActivity(new Intent(this, TrackingActivity.class));
-        });
+        findViewById(R.id.service_ironing).setOnClickListener(v -> startActivity(new Intent(this, ServiceDetailActivity.class)));
+
+        findViewById(R.id.service_wash_iron).setOnClickListener(v -> startActivity(new Intent(this, ServiceDetailActivity.class)));
 
         // Bottom Navigation
         BottomNavigationView bottomNav = findViewById(R.id.bottom_nav);
         bottomNav.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
-            if (id == R.id.nav_basket) {
-                startActivity(new Intent(this, BasketActivity.class));
+            if (id == R.id.nav_home) {
+                // Already here
                 return true;
-            } else if (id == R.id.nav_tracking) {
-                startActivity(new Intent(this, TrackingActivity.class));
+            } else if (id == R.id.nav_search) {
+                startActivity(new Intent(this, OrdersActivity.class));
                 return true;
-            } else if (id == R.id.nav_profile) {
-                startActivity(new Intent(this, ProfileActivity.class));
+            } else if (id == R.id.nav_notifications) {
+                // Just toast for now
+                return true;
+            } else if (id == R.id.nav_messages) {
+                // Just toast for now
                 return true;
             }
             return true;

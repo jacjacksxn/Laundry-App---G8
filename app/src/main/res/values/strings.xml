@@ -1,3 +1,70 @@
 <resources>
-    <string name="app_name">Washly</string>
+    <string name="app_name">Laundry Group 8</string>
+
+    <!-- MainActivity -->
+    <string name="discover">Discover</string>
+    <string name="laundry_service">Laundry Service</string>
+    <string name="search_services">Search Services</string>
+    <string name="choose_services">Choose Services</string>
+    <string name="ironing">Ironing</string>
+    <string name="wash_iron">Wash &amp; Iron</string>
+    <string name="dry_cleaning">Dry Cleaning</string>
+    <string name="more">More</string>
+    <string name="recommended">Recommended</string>
+
+    <!-- LoginActivity -->
+    <string name="welcome_back">Welcome Back</string>
+    <string name="sign_in_continue">Sign in to continue</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+
+    <!-- OrdersActivity -->
+    <string name="my_orders">My Orders</string>
+    <string name="search_orders">Search orders...</string>
+    <string name="add_new_order">Add New Order</string>
+    <string name="delete_order">Delete Order</string>
+    <string name="delete_confirmation">Are you sure you want to delete this order?</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="order_added">Order added</string>
+    <string name="order_updated">Order updated</string>
+    <string name="order_deleted">Order deleted</string>
+    <string name="fields_empty">Fields cannot be empty</string>
+    <string name="invalid_credentials">Invalid credentials</string>
+    <string name="please_enter_credentials">Please enter credentials</string>
+
+    <!-- Item Order -->
+    <string name="service_name_hint">Service Name</string>
+    <string name="price_format">$%1$.2f</string>
+    <string name="status_hint">Status</string>
+
+    <!-- Dialog Order -->
+    <string name="order_details">Order Details</string>
+    <string name="price">Price</string>
+    <string name="status_placeholder">Status (e.g. In Progress)</string>
+    <string name="save">Save</string>
+
+    <!-- Splash -->
+    <string name="laundry_group_8">Laundry Group 8</string>
+
+    <!-- Service Detail -->
+    <string name="papa_laundry">Papa Laundry</string>
+    <string name="location_sample">JL. Kenangan saat bersamamu (1.3 km)</string>
+    <string name="five_stars">5 Stars</string>
+    <string name="work_period">Work Period</string>
+    <string name="weekly">Weekly</string>
+    <string name="biweekly">Biweekly</string>
+    <string name="monthly">Monthly</string>
+    <string name="work_time">Work Time</string>
+    <string name="time_07">07:00</string>
+    <string name="time_10">10:00</string>
+    <string name="time_14">14:00</string>
+    <string name="make_appointment">Make Appointment</string>
+
+    <!-- Menu -->
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="notification">Notification</string>
+    <string name="message">Message</string>
 </resources>
