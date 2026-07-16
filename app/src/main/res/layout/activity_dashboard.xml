@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Main Dashboard Layout -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Discover Laundry Service"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:hint="Search Services..."
+        android:padding="10dp"
+        android:background="@android:drawable/edit_text" />
+
+    <!-- Service Quick Add Button -->
+    <Button
+        android:id="@+id/btn_add_wash_fold"
+        android:drawableStart="@drawable/wash_fold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Add Wash &amp; Fold (GHS 20.00)" />
+
+    <Button
+        android:id="@+id/btn_add_wash_iron"
+        android:drawableStart="@drawable/wash_iron"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Add Wash &amp; Iron (GHS 25.00)" />
+
+    <Button
+        android:id="@+id/btn_add_iron_only"
+        android:drawableStart="@drawable/iron"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Add Iron Only (GHS 10.00)" />
+
+    <Button
+        android:id="@+id/btn_add_shoe_care"
+        android:drawableStart="@drawable/shoe_care"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Add Shoe Care (GHS 20.00)" />
+
+    <Button
+        android:id="@+id/btn_add_bulk_wash"
+        android:drawableStart="@drawable/bulk_wash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Add Bulk Wash (GHS 40.00)" />
+
+    <Button
+        android:id="@+id/btn_add_dry_clean"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Add Dry Clean (GHS 20.00)" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvServices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Active Orders"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvOrders"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

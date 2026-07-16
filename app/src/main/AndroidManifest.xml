@@ -34,7 +34,7 @@
             android:windowSoftInputMode="adjustResize" />
         <activity android:name=".ServiceDetailActivity" />
         <activity android:name=".BasketActivity" />
-        <activity android:name=".TrackingActivity" />
+        <activity android:name=".OrderTrackingActivity" />
         <activity android:name=".ProfileActivity" />
     </application>
 
