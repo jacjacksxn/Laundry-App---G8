@@ -9,6 +9,7 @@
     app:cardBackgroundColor="#F2F4F7">
 
     <ImageView
+        android:id="@+id/iv_recommended"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription="@string/recommended"

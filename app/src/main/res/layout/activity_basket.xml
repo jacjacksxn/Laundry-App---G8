@@ -3,20 +3,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_light">
+    android:background="@color/white">
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/service_icon_bg"
+        android:contentDescription="@string/cancel"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/text_dark" />
 
     <TextView
         android:id="@+id/basket_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="48dp"
-        android:text="Basket"
-        android:textColor="@color/black"
+        android:layout_marginTop="24dp"
+        android:text="@string/basket"
+        android:textColor="@color/text_dark"
         android:textSize="32sp"
-        android:fontFamily="sans-serif-black"
+        android:fontFamily="@font/lobster_2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/btn_back" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -34,7 +46,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/glass_background"
+                android:background="@drawable/search_bar_bg"
                 android:orientation="vertical"
                 android:padding="20dp">
 
@@ -45,14 +57,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="2x T-Shirt"
-                        android:textColor="@color/black"
+                        android:textColor="@color/text_dark"
+                        android:fontFamily="@font/sofia"
                         android:textSize="16sp" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:text="$4.00"
-                        android:textColor="@color/black"
+                        android:textColor="@color/text_dark"
+                        android:fontFamily="@font/sofia"
                         android:textStyle="bold" />
                 </RelativeLayout>
 
@@ -68,14 +82,16 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Delivery"
-                        android:textColor="#80000000" />
+                        android:text="@string/delivery"
+                        android:textColor="@color/text_grey"
+                        android:fontFamily="@font/sofia" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:text="$2.00"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/text_dark"
+                        android:fontFamily="@font/sofia" />
                 </RelativeLayout>
 
             </LinearLayout>
@@ -84,29 +100,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:text="Pickup details"
-                android:textColor="@color/black"
+                android:text="@string/pickup_details"
+                android:textColor="@color/text_dark"
                 android:textSize="18sp"
-                android:fontFamily="sans-serif-medium" />
+                android:fontFamily="@font/lobster_2"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/glass_background"
+                android:background="@drawable/search_bar_bg"
                 android:padding="20dp"
                 android:gravity="center_vertical">
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:src="@android:drawable/ic_menu_today"
-                    app:tint="@color/vibrant_blue" />
+                    app:tint="@color/primary_green"
+                    android:contentDescription="@string/pickup_details" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:text="Tomorrow, 10 AM - 12 PM"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/text_dark"
+                    android:fontFamily="@font/sofia" />
             </LinearLayout>
 
         </LinearLayout>
@@ -116,7 +135,7 @@
         android:id="@+id/bottom_panel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/glass_background"
+        android:background="@color/white"
         android:elevation="16dp"
         android:orientation="vertical"
         android:padding="24dp"
@@ -129,27 +148,32 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total"
-                android:textColor="#80000000"
+                android:text="@string/total"
+                android:textColor="@color/text_grey"
+                android:fontFamily="@font/sofia"
                 android:textSize="16sp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:text="$6.00"
-                android:textColor="@color/black"
+                android:textColor="@color/text_dark"
                 android:textSize="24sp"
-                android:fontFamily="sans-serif-black" />
+                android:fontFamily="@font/lobster_2"
+                android:textStyle="bold" />
         </RelativeLayout>
 
-        <com.google.android.material.button.MaterialButton
+        <Button
+            android:id="@+id/btn_pay"
             android:layout_width="match_parent"
             android:layout_height="64dp"
-            android:text="Pay Now"
+            android:text="@string/pay_now"
             android:textAllCaps="false"
             android:textSize="18sp"
-            app:cornerRadius="20dp"
-            app:backgroundTint="@color/vibrant_blue" />
+            android:fontFamily="@font/sofia"
+            android:textColor="@color/white"
+            android:background="@drawable/primary_button_bg"
+            app:backgroundTint="@null" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,8 +6,6 @@ import android.os.Handler;
 import android.os.Looper;
 import androidx.appcompat.app.AppCompatActivity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 public class SplashActivity extends AppCompatActivity {
 
     @Override
@@ -18,13 +16,9 @@ public class SplashActivity extends AppCompatActivity {
 
         // Delay then open login screen
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
-
-            new Handler().postDelayed(() -> {
-
-                startActivity(new Intent(SplashActivity.this, LoginActivity.class));
-                finish();
-            }, 2000);
-        }
+            startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+            finish();
+        }, 2000);
 
     }
 

@@ -3,25 +3,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_light"
-    android:paddingHorizontal="24dp">
+    android:background="@color/white">
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/service_icon_bg"
+        android:contentDescription="@string/cancel"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/text_dark" />
 
     <TextView
         android:id="@+id/track_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="Status"
-        android:textColor="@color/black"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/status"
+        android:textColor="@color/text_dark"
         android:textSize="32sp"
-        android:fontFamily="sans-serif-black"
+        android:fontFamily="@font/lobster_2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/btn_back" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
+        android:paddingHorizontal="24dp"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/track_title">
 
@@ -34,22 +47,22 @@
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:background="@drawable/status_dot"
-                android:backgroundTint="@color/vibrant_blue" />
+                android:backgroundTint="@color/primary_green" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/dot1"
                 android:layout_marginStart="24dp"
-                android:text="Order Received"
-                android:textColor="@color/black"
-                android:fontFamily="sans-serif-medium" />
+                android:text="@string/order_received"
+                android:textColor="@color/text_dark"
+                android:fontFamily="@font/sofia" />
         </RelativeLayout>
 
         <View
             android:layout_width="2dp"
             android:layout_height="48dp"
             android:layout_marginStart="7dp"
-            android:background="@color/vibrant_blue" />
+            android:background="@color/primary_green" />
 
         <!-- Step 2 -->
         <RelativeLayout
@@ -60,15 +73,15 @@
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:background="@drawable/status_dot"
-                android:backgroundTint="@color/vibrant_blue" />
+                android:backgroundTint="@color/primary_green" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/dot2"
                 android:layout_marginStart="24dp"
-                android:text="Washing"
-                android:textColor="@color/black"
-                android:fontFamily="sans-serif-medium" />
+                android:text="@string/washing"
+                android:textColor="@color/text_dark"
+                android:fontFamily="@font/sofia" />
         </RelativeLayout>
 
         <View
@@ -92,20 +105,20 @@
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/dot3"
                 android:layout_marginStart="24dp"
-                android:text="Delivering"
-                android:textColor="#80000000" />
+                android:text="@string/delivering"
+                android:textColor="@color/text_grey"
+                android:fontFamily="@font/sofia" />
         </RelativeLayout>
 
     </LinearLayout>
 
-    <com.google.android.material.card.MaterialCardView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_margin="24dp"
         app:cardCornerRadius="24dp"
         app:cardElevation="0dp"
-        app:strokeWidth="1dp"
-        app:strokeColor="#10000000"
+        app:cardBackgroundColor="#F2F4F7"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
@@ -117,10 +130,12 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:background="@color/vibrant_blue"
+                android:background="@drawable/primary_button_bg"
                 android:padding="12dp"
-                android:src="@android:drawable/ic_menu_call"
-                app:tint="@color/white" />
+                android:src="@drawable/ic_call"
+                app:backgroundTint="@null"
+                app:tint="@color/white"
+                android:contentDescription="@string/support" />
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -130,17 +145,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Support"
-                    android:textColor="@color/black"
-                    android:fontFamily="sans-serif-medium" />
+                    android:text="@string/support"
+                    android:textColor="@color/text_dark"
+                    android:fontFamily="@font/lobster_2"
+                    android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Talk to us about your order"
+                    android:text="@string/talk_to_us"
                     android:textSize="13sp"
-                    android:textColor="#80000000" />
+                    android:textColor="@color/text_grey"
+                    android:fontFamily="@font/sofia" />
             </LinearLayout>
         </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

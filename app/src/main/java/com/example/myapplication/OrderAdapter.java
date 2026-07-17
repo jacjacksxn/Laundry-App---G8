@@ -11,7 +11,7 @@ import java.util.List;
 
 public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHolder> {
 
-    private List<Order> orderList;
+    private final List<Order> orderList;
     private final OnOrderClickListener listener;
 
     public interface OnOrderClickListener {
@@ -38,6 +38,16 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
         holder.tvPrice.setText(holder.itemView.getContext().getString(R.string.price_format, order.getPrice()));
         holder.tvStatus.setText(order.getStatus());
 
+        // Dynamic icon assignment based on service name
+        String service = order.getServiceName().toLowerCase();
+        if (service.contains("iron")) {
+            holder.ivServiceIcon.setImageResource(R.drawable.ic_ironing);
+        } else if (service.contains("dry")) {
+            holder.ivServiceIcon.setImageResource(R.drawable.ic_dry_clean);
+        } else {
+            holder.ivServiceIcon.setImageResource(R.drawable.ic_wash);
+        }
+
         holder.btnEdit.setOnClickListener(v -> listener.onEditClick(order));
         holder.btnDelete.setOnClickListener(v -> listener.onDeleteClick(order));
     }
@@ -47,14 +57,10 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
         return orderList.size();
     }
 
-    public void updateList(List<Order> newList) {
-        this.orderList = newList;
-        notifyDataSetChanged();
-    }
-
-    static class OrderViewHolder extends RecyclerView.ViewHolder {
+    public static class OrderViewHolder extends RecyclerView.ViewHolder {
         TextView tvServiceName, tvPrice, tvStatus;
         ImageButton btnEdit, btnDelete;
+        android.widget.ImageView ivServiceIcon;
 
         OrderViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -63,6 +69,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
             tvStatus = itemView.findViewById(R.id.tv_status);
             btnEdit = itemView.findViewById(R.id.btn_edit);
             btnDelete = itemView.findViewById(R.id.btn_delete);
+            ivServiceIcon = itemView.findViewById(R.id.iv_service_icon);
         }
     }
 }

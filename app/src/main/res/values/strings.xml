@@ -9,6 +9,7 @@
     <string name="ironing">Ironing</string>
     <string name="wash_iron">Wash &amp; Iron</string>
     <string name="dry_cleaning">Dry Cleaning</string>
+    <string name="wash_fold">Wash &amp; Fold</string>
     <string name="more">More</string>
     <string name="recommended">Recommended</string>
 
@@ -67,4 +68,27 @@
     <string name="search">Search</string>
     <string name="notification">Notification</string>
     <string name="message">Message</string>
+    <!-- Basket -->
+    <string name="basket">Basket</string>
+    <string name="delivery">Delivery</string>
+    <string name="total">Total</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="pickup_details">Pickup details</string>
+
+    <!-- Tracking -->
+    <string name="status">Status</string>
+    <string name="order_received">Order Received</string>
+    <string name="washing">Washing</string>
+    <string name="delivering">Delivering</string>
+    <string name="support">Support</string>
+    <string name="talk_to_us">Talk to us about your order</string>
+
+    <!-- Profile -->
+    <string name="account_details">Account Details</string>
+    <string name="past_orders">Past Orders</string>
+    <string name="logout">Logout</string>
+    <string name="active_orders">Active Orders</string>
+    <string name="order_history">Order History</string>
+    <string name="order_no_sample">Order No : #73636265</string>
+    <string name="order_confirmed">Order Confirmed</string>
 </resources>

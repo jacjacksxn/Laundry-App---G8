@@ -1,9 +1,7 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
-
-import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,20 +12,15 @@ public class ServiceDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service_detail);
 
-
         // Back navigation
-        findViewById(R.id.btnBack).setOnClickListener(v -> finish());
+        findViewById(R.id.btn_back).setOnClickListener(v -> finish());
 
         // Confirm action
         if (findViewById(R.id.btnContinue) != null) {
             findViewById(R.id.btnContinue).setOnClickListener(v -> {
-                Toast.makeText(this, "Schedule Confirmed!", Toast.LENGTH_SHORT).show();
-                finish();
+                startActivity(new Intent(this, BasketActivity.class));
             });
         }
-
-        ImageButton btnBack = findViewById(R.id.btn_back);
-        btnBack.setOnClickListener(v -> finish());
 
     }
 }

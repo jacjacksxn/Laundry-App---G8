@@ -8,6 +8,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.ViewHolder> {
 
+    private final int[] images = {
+            R.drawable.iron,
+            R.drawable.bulk_wash,
+            R.drawable.shoe_care,
+            R.drawable.wash_iron,
+            R.drawable.wash_logo
+    };
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -17,17 +25,19 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        // Simple placeholder
+        holder.imageView.setImageResource(images[position % images.length]);
     }
 
     @Override
     public int getItemCount() {
-        return 5; // Placeholder count
+        return images.length;
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
+        android.widget.ImageView imageView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            imageView = itemView.findViewById(R.id.iv_recommended);
         }
     }
 }
