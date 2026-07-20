@@ -68,10 +68,10 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(this, ServiceDetailActivity.class));
                     return true;
                 } else if (id == R.id.nav_notifications) {
-                    // Feature coming soon
+                    startActivity(new Intent(this, NotificationsActivity.class));
                     return true;
                 } else if (id == R.id.nav_messages) {
-                    // Feature coming soon
+                    startActivity(new Intent(this, MessagesActivity.class));
                     return true;
                 }
                 return true;

@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF1A1A1A</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Brand Colors -->
+    <color name="brand_primary">#1E3A8A</color>
+    <color name="brand_accent">#10B981</color>
 
-    <!-- Vibrant Minimalist Palette -->
-    <color name="vibrant_blue">#007AFF</color>
-    <color name="vibrant_purple">#AF52DE</color>
-    <color name="vibrant_pink">#FF2D55</color>
-    <color name="vibrant_orange">#FF9500</color>
-    <color name="vibrant_teal">#5AC8FA</color>
+    <!-- Backgrounds and Surfaces -->
+    <color name="bg_main">#F8F9FC</color>
+    <color name="bg_surface">#FFFFFF</color>
+    <color name="divider">#F1F5F9</color>
 
-    <color name="bg_light">#FFFFFF</color>
-    <color name="bg_dark">#000000</color>
+    <!-- Typography & Icons -->
+    <color name="text_primary">#1E293B</color>
+    <color name="text_secondary">#64748B</color>
 
-    <!-- Refined Glass Effect -->
+    <!-- Feedback -->
+    <color name="error_red">#EF4444</color>
+
+    <!-- Glassmorphism -->
     <color name="glass_white">#F2FFFFFF</color>
-    <color name="glass_dark">#1AFFFFFF</color>
-    <color name="glass_border">#1A000000</color>
-    <color name="glass_border_dark">#33FFFFFF</color>
-    <color name="primary_green">#27C78D</color>
-    <color name="dark_navy">#2B3A4A</color>
-    <color name="light_grey">#F5F7FA</color>
-    <color name="text_grey">#9E9E9E</color>
-    <color name="text_dark">#2B3A4A</color>
+    <color name="glass_border">#33FFFFFF</color>
+    <color name="glass_border_dark">#33000000</color>
 </resources>

@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="12dp"
     app:cardCornerRadius="15dp"
-    app:cardElevation="2dp">
+    app:cardBackgroundColor="@color/bg_surface">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,8 +20,8 @@
             android:layout_height="48dp"
             android:background="@drawable/service_icon_bg"
             android:padding="12dp"
-            android:src="@drawable/ic_wash"
-            app:tint="@color/primary_green"
+            android:src="@drawable/baseline_local_laundry_service_24"
+            app:tint="@color/brand_accent"
             android:contentDescription="@string/app_name" />
 
         <LinearLayout
@@ -36,7 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/service_name_hint"
-                android:textColor="@color/text_dark"
+                android:textColor="@color/text_primary"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -45,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/price"
-                android:textColor="@color/primary_green"
+                android:textColor="@color/brand_accent"
                 android:textSize="14sp" />
 
             <TextView
@@ -53,7 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/status_hint"
-                android:textColor="@color/text_grey"
+                android:textColor="@color/text_secondary"
                 android:textSize="12sp" />
         </LinearLayout>
 
@@ -64,7 +64,7 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="@string/save"
             android:src="@drawable/ic_edit"
-            app:tint="@color/text_grey" />
+            app:tint="@color/text_secondary" />
 
         <ImageButton
             android:id="@+id/btn_delete"
@@ -73,7 +73,7 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="@string/delete"
             android:src="@drawable/ic_delete"
-            app:tint="@color/vibrant_pink" />
+            app:tint="@color/error_red" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

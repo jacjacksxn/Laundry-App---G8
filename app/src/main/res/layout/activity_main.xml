@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/bg_main"
     tools:context=".MainActivity">
 
     <ScrollView
@@ -33,7 +33,7 @@
                     android:layout_height="32dp"
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/ic_menu"
-                    app:tint="@color/text_dark" />
+                    app:tint="@color/text_primary" />
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_profile"
@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="@string/discover"
-                android:textColor="@color/text_dark"
+                android:textColor="@color/text_primary"
                 android:textSize="24sp"
                 android:fontFamily="@font/thirsty_script" />
 
@@ -68,7 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/laundry_service"
-                android:textColor="@color/text_dark"
+                android:textColor="@color/text_primary"
                 android:textSize="28sp"
                 android:fontFamily="@font/lobster_2"
                 android:textStyle="bold" />
@@ -94,7 +94,7 @@
                         android:layout_height="20dp"
                         android:contentDescription="@string/search"
                         android:src="@drawable/ic_search"
-                        app:tint="@color/text_grey" />
+                        app:tint="@color/text_secondary" />
 
                     <EditText
                         android:id="@+id/search_services"
@@ -118,7 +118,7 @@
                     android:contentDescription="@string/more"
                     android:padding="14dp"
                     android:src="@drawable/ic_filter"
-                    app:tint="@color/text_grey" />
+                    app:tint="@color/text_secondary" />
             </LinearLayout>
 
             <!-- Choose Services -->
@@ -127,7 +127,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="@string/choose_services"
-                android:textColor="@color/text_dark"
+                android:textColor="@color/text_primary"
                 android:textSize="18sp"
                 android:fontFamily="@font/lobster_2"
                 android:textStyle="bold" />
@@ -158,16 +158,15 @@
                             android:layout_height="60dp"
                             android:background="@drawable/service_icon_bg"
                             android:contentDescription="@string/ironing"
-                            android:padding="16dp"
-                            android:src="@drawable/ic_ironing"
-                            app:tint="@color/text_dark" />
+                            android:padding="16dp"    android:src="@drawable/baseline_iron_24"
+                            app:tint="@color/text_primary" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
                             android:text="@string/ironing"
-                            android:textColor="@color/text_grey"
+                            android:textColor="@color/text_secondary"
                             android:fontFamily="@font/sofia"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -188,15 +187,15 @@
                             android:background="@drawable/service_icon_bg"
                             android:contentDescription="@string/wash_iron"
                             android:padding="16dp"
-                            android:src="@drawable/ic_wash"
-                            app:tint="@color/text_dark" />
+                            android:src="@drawable/baseline_local_laundry_service_24"
+                            app:tint="@color/text_primary" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
                             android:text="@string/wash_iron"
-                            android:textColor="@color/text_grey"
+                            android:textColor="@color/text_secondary"
                             android:fontFamily="@font/sofia"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -214,15 +213,15 @@
                             android:background="@drawable/service_icon_bg"
                             android:contentDescription="@string/dry_cleaning"
                             android:padding="16dp"
-                            android:src="@drawable/ic_dry_clean"
-                            app:tint="@color/text_dark" />
+                            android:src="@drawable/baseline_dry_cleaning_24"
+                            app:tint="@color/text_primary" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
                             android:text="@string/dry_cleaning"
-                            android:textColor="@color/text_grey"
+                            android:textColor="@color/text_secondary"
                             android:fontFamily="@font/sofia"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -240,15 +239,15 @@
                             android:background="@drawable/service_icon_bg"
                             android:contentDescription="@string/wash_fold"
                             android:padding="16dp"
-                            android:src="@drawable/ic_laundry_logo"
-                            app:tint="@color/text_dark" />
+                            android:src="@drawable/baseline_water_drop_24"
+                            app:tint="@color/text_primary" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
                             android:text="@string/wash_fold"
-                            android:textColor="@color/text_grey"
+                            android:textColor="@color/text_secondary"
                             android:fontFamily="@font/sofia"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -267,14 +266,14 @@
                             android:contentDescription="@string/more"
                             android:padding="16dp"
                             android:src="@drawable/ic_more"
-                            app:tint="@color/text_dark" />
+                            app:tint="@color/text_primary" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
                             android:text="@string/more"
-                            android:textColor="@color/text_grey"
+                            android:textColor="@color/text_secondary"
                             android:fontFamily="@font/sofia"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -292,7 +291,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/active_orders"
-                    android:textColor="@color/text_dark"
+                    android:textColor="@color/text_primary"
                     android:textSize="18sp"
                     android:fontFamily="@font/lobster_2"
                     android:textStyle="bold" />
@@ -307,7 +306,7 @@
                     android:paddingHorizontal="12dp"
                     android:paddingVertical="4dp"
                     android:text="@string/order_history"
-                    android:textColor="@color/white"
+                    android:textColor="@color/bg_surface"
                     android:textSize="12sp"
                     android:fontFamily="@font/sofia" />
             </RelativeLayout>
@@ -321,7 +320,7 @@
                 android:focusable="true"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="2dp"
-                app:cardBackgroundColor="@color/glass_white">
+                app:cardBackgroundColor="#8CC3EF">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -332,10 +331,10 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:background="@drawable/service_icon_bg"
+                        android:background="@drawable/glass_background"
                         android:padding="12dp"
-                        android:src="@drawable/ic_wash"
-                        app:tint="@color/primary_green"
+                        android:src="@drawable/baseline_local_laundry_service_24"
+                        app:tint="@color/brand_accent"
                         android:contentDescription="@string/washing" />
 
                     <LinearLayout
@@ -349,7 +348,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/order_no_sample"
-                            android:textColor="@color/text_dark"
+                            android:textColor="@color/text_primary"
                             android:fontFamily="@font/sofia"
                             android:textStyle="bold" />
 
@@ -357,7 +356,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/order_confirmed"
-                            android:textColor="@color/text_grey"
+                            android:textColor="@color/text_secondary"
                             android:textSize="12sp"
                             android:fontFamily="@font/sofia" />
                     </LinearLayout>
@@ -370,7 +369,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="@string/recommended"
-                android:textColor="@color/text_dark"
+                android:textColor="@color/text_primary"
                 android:textSize="18sp"
                 android:fontFamily="@font/lobster_2"
                 android:textStyle="bold" />
@@ -392,9 +391,9 @@
         android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        app:itemIconTint="@color/text_grey"
-        app:itemTextColor="@color/text_grey"
+        android:background="@color/bg_main"
+        app:itemIconTint="@color/text_secondary"
+        app:itemTextColor="@color/text_secondary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_nav_menu"
         app:labelVisibilityMode="labeled" />

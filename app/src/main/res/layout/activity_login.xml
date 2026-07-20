@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/bg_main"
     android:padding="24dp">
 
     <TextView
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:text="@string/welcome_back"
-        android:textColor="@color/text_dark"
+        android:textColor="@color/text_primary"
         android:textSize="28sp"
         android:fontFamily="@font/lobster_2"
         android:textStyle="bold"
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/sign_in_continue"
-        android:textColor="@color/text_grey"
+        android:textColor="@color/brand_primary"
         android:textSize="16sp"
         android:fontFamily="@font/sofia"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +65,7 @@
         android:background="@drawable/primary_button_bg"
         android:text="@string/login"
         android:textAllCaps="false"
-        android:textColor="@color/white"
+        android:textColor="@color/bg_surface"
         android:textSize="18sp"
         android:fontFamily="@font/sofia"
         app:backgroundTint="@null"

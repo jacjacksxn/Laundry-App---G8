@@ -36,6 +36,8 @@
         <activity android:name=".BasketActivity" />
         <activity android:name=".OrderTrackingActivity" />
         <activity android:name=".ProfileActivity" />
+        <activity android:name=".NotificationsActivity" />
+        <activity android:name=".MessagesActivity" />
     </application>
 
 </manifest>

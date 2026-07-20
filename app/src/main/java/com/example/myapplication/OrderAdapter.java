@@ -41,9 +41,9 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
         // Dynamic icon assignment based on service name
         String service = order.getServiceName().toLowerCase();
         if (service.contains("iron")) {
-            holder.ivServiceIcon.setImageResource(R.drawable.ic_ironing);
+            holder.ivServiceIcon.setImageResource(R.drawable.baseline_iron_24);
         } else if (service.contains("dry")) {
-            holder.ivServiceIcon.setImageResource(R.drawable.ic_dry_clean);
+            holder.ivServiceIcon.setImageResource(R.drawable.baseline_dry_cleaning_24);
         } else {
             holder.ivServiceIcon.setImageResource(R.drawable.ic_wash);
         }

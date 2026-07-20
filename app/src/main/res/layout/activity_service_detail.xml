@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E5E5E5">
+    android:background="@color/bg_main">
 
     <ImageView
         android:id="@+id/iv_illustration"
@@ -11,7 +11,7 @@
         android:layout_height="300dp"
         android:contentDescription="@string/app_name"
         android:scaleType="centerCrop"
-        android:src="@drawable/wash_iron"
+        android:src="@drawable/ic_launcher_foreground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,7 +26,7 @@
         android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/text_dark" />
+        app:tint="@color/text_primary" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -51,7 +51,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/papa_laundry"
-                    android:textColor="@color/text_dark"
+                    android:textColor="@color/text_primary"
                     android:textSize="24sp"
                     android:fontFamily="@font/lobster_2"
                     android:textStyle="bold" />
@@ -63,7 +63,7 @@
                     android:layout_below="@+id/tv_detail_name"
                     android:layout_marginTop="4dp"
                     android:text="@string/location_sample"
-                    android:textColor="@color/text_grey"
+                    android:textColor="@color/text_secondary"
                     android:fontFamily="@font/sofia"
                     android:textSize="14sp" />
 
@@ -75,7 +75,7 @@
                     android:contentDescription="@string/recommended"
                     android:padding="12dp"
                     android:src="@android:drawable/btn_star_big_on"
-                    app:tint="@color/vibrant_pink" />
+                    app:tint="@color/error_red" />
             </RelativeLayout>
 
             <LinearLayout
@@ -91,14 +91,14 @@
                     android:layout_height="wrap_content"
                     android:numStars="5"
                     android:rating="5"
-                    android:progressTint="@color/vibrant_orange" />
+                    android:progressTint="@color/brand_accent" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:text="@string/five_stars"
-                    android:textColor="@color/text_grey"
+                    android:textColor="@color/text_secondary"
                     android:textSize="12sp" />
             </LinearLayout>
 
@@ -107,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="@string/work_period"
-                android:textColor="@color/text_dark"
+                android:textColor="@color/text_primary"
                 android:textSize="18sp"
                 android:fontFamily="@font/lobster_2"
                 android:textStyle="bold" />
@@ -126,7 +126,7 @@
                     android:background="@drawable/primary_button_bg"
                     android:gravity="center"
                     android:text="@string/weekly"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/bg_surface" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -136,7 +136,7 @@
                     android:background="@drawable/search_bar_bg"
                     android:gravity="center"
                     android:text="@string/biweekly"
-                    android:textColor="@color/text_grey" />
+                    android:textColor="@color/text_secondary" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -145,7 +145,7 @@
                     android:background="@drawable/search_bar_bg"
                     android:gravity="center"
                     android:text="@string/monthly"
-                    android:textColor="@color/text_grey" />
+                    android:textColor="@color/text_secondary" />
             </LinearLayout>
 
             <TextView
@@ -153,7 +153,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="@string/work_time"
-                android:textColor="@color/text_dark"
+                android:textColor="@color/text_primary"
                 android:textSize="18sp"
                 android:fontFamily="@font/lobster_2"
                 android:textStyle="bold" />
@@ -172,7 +172,7 @@
                     android:background="@drawable/search_bar_bg"
                     android:gravity="center"
                     android:text="@string/time_07"
-                    android:textColor="@color/text_grey" />
+                    android:textColor="@color/text_secondary" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -182,7 +182,7 @@
                     android:background="@drawable/primary_button_bg"
                     android:gravity="center"
                     android:text="@string/time_10"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/bg_surface" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -191,7 +191,7 @@
                     android:background="@drawable/search_bar_bg"
                     android:gravity="center"
                     android:text="@string/time_14"
-                    android:textColor="@color/text_grey" />
+                    android:textColor="@color/text_secondary" />
             </LinearLayout>
 
             <LinearLayout
@@ -208,7 +208,7 @@
                     android:contentDescription="@string/cancel"
                     android:padding="12dp"
                     android:src="@drawable/ic_call"
-                    app:tint="@color/text_grey" />
+                    app:tint="@color/text_secondary" />
 
                 <ImageView
                     android:layout_width="48dp"
@@ -218,7 +218,7 @@
                     android:contentDescription="@string/message"
                     android:padding="12dp"
                     android:src="@drawable/ic_chat"
-                    app:tint="@color/text_grey" />
+                    app:tint="@color/text_secondary" />
 
                 <Button
                     android:id="@+id/btnContinue"
@@ -229,7 +229,7 @@
                     android:background="@drawable/primary_button_bg"
                     android:text="@string/make_appointment"
                     android:textAllCaps="false"
-                    android:textColor="@color/white"
+                    android:textColor="@color/bg_surface"
                     android:fontFamily="@font/sofia"
                     app:backgroundTint="@null" />
             </LinearLayout>

@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/order_details"
-        android:textColor="@color/text_dark"
+        android:textColor="@color/text_primary"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginBottom="16dp"/>
@@ -48,7 +48,7 @@
         android:layout_marginTop="24dp"
         android:background="@drawable/primary_button_bg"
         android:text="@string/save"
-        android:textColor="@color/white"
+        android:textColor="@color/bg_surface"
         app:backgroundTint="@null" />
 
 </LinearLayout>

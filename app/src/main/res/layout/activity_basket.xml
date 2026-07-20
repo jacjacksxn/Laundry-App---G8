@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/bg_main">
 
     <ImageButton
         android:id="@+id/btn_back"
@@ -15,7 +15,7 @@
         android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/text_dark" />
+        app:tint="@color/text_primary" />
 
     <TextView
         android:id="@+id/basket_title"
@@ -24,7 +24,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:text="@string/basket"
-        android:textColor="@color/text_dark"
+        android:textColor="@color/text_primary"
         android:textSize="32sp"
         android:fontFamily="@font/lobster_2"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +57,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="2x T-Shirt"
-                        android:textColor="@color/text_dark"
+                        android:textColor="@color/text_primary"
                         android:fontFamily="@font/sofia"
                         android:textSize="16sp" />
                     <TextView
@@ -65,7 +65,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:text="$4.00"
-                        android:textColor="@color/text_dark"
+                        android:textColor="@color/text_primary"
                         android:fontFamily="@font/sofia"
                         android:textStyle="bold" />
                 </RelativeLayout>
@@ -83,14 +83,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/delivery"
-                        android:textColor="@color/text_grey"
+                        android:textColor="@color/text_secondary"
                         android:fontFamily="@font/sofia" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:text="$2.00"
-                        android:textColor="@color/text_dark"
+                        android:textColor="@color/text_primary"
                         android:fontFamily="@font/sofia" />
                 </RelativeLayout>
 
@@ -101,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="@string/pickup_details"
-                android:textColor="@color/text_dark"
+                android:textColor="@color/text_primary"
                 android:textSize="18sp"
                 android:fontFamily="@font/lobster_2"
                 android:textStyle="bold" />
@@ -113,18 +113,19 @@
                 android:background="@drawable/search_bar_bg"
                 android:padding="20dp"
                 android:gravity="center_vertical">
+
                 <ImageView
-                    android:layout_width="24dp"
+                    android:layout_width="31dp"
                     android:layout_height="24dp"
+                    android:contentDescription="@string/pickup_details"
                     android:src="@android:drawable/ic_menu_today"
-                    app:tint="@color/primary_green"
-                    android:contentDescription="@string/pickup_details" />
+                    app:tint="@color/brand_accent" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:text="Tomorrow, 10 AM - 12 PM"
-                    android:textColor="@color/text_dark"
+                    android:textColor="@color/text_primary"
                     android:fontFamily="@font/sofia" />
             </LinearLayout>
 
@@ -135,7 +136,7 @@
         android:id="@+id/bottom_panel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@color/bg_surface"
         android:elevation="16dp"
         android:orientation="vertical"
         android:padding="24dp"
@@ -149,7 +150,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/total"
-                android:textColor="@color/text_grey"
+                android:textColor="@color/text_secondary"
                 android:fontFamily="@font/sofia"
                 android:textSize="16sp" />
             <TextView
@@ -157,7 +158,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:text="$6.00"
-                android:textColor="@color/text_dark"
+                android:textColor="@color/text_primary"
                 android:textSize="24sp"
                 android:fontFamily="@font/lobster_2"
                 android:textStyle="bold" />
@@ -171,7 +172,7 @@
             android:textAllCaps="false"
             android:textSize="18sp"
             android:fontFamily="@font/sofia"
-            android:textColor="@color/white"
+            android:textColor="@color/bg_surface"
             android:background="@drawable/primary_button_bg"
             app:backgroundTint="@null" />
     </LinearLayout>
