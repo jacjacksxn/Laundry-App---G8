@@ -1,5 +1,4 @@
 package com.example.myapplication;
-
 public class Order {
     private final int id;
     private final String serviceName;

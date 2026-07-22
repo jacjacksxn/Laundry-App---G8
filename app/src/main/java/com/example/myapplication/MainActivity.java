@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         // Active Order Section Navigation
         if (findViewById(R.id.btn_order_history) != null) {
             findViewById(R.id.btn_order_history).setOnClickListener(v -> 
-                    startActivity(new Intent(this, OrdersActivity.class)));
+                    startActivity(new Intent(this,OrdersActivity.class)));
         }
 
         if (findViewById(R.id.btn_active_order) != null) {
@@ -64,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
                 int id = item.getItemId();
                 if (id == R.id.nav_home) {
                     return true;
-                } else if (id == R.id.nav_search) {
-                    startActivity(new Intent(this, ServiceDetailActivity.class));
+                } else if (id == R.id.nav_basket) {
+                    startActivity(new Intent(this, BasketActivity.class));
                     return true;
                 } else if (id == R.id.nav_notifications) {
                     startActivity(new Intent(this, NotificationsActivity.class));
