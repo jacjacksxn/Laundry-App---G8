@@ -13,7 +13,7 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
             R.drawable.bulk_wash,
             R.drawable.shoe_care,
             R.drawable.wash_iron,
-            R.drawable.wash_logo
+            R.drawable.wash_fold
     };
 
     @NonNull
@@ -26,6 +26,8 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.imageView.setImageResource(images[position % images.length]);
+        // Removed color filter as we are now using real photos/images
+        holder.imageView.clearColorFilter();
     }
 
     @Override

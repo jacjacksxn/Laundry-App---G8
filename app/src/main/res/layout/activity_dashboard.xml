@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Main Dashboard Layout -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -23,10 +22,9 @@
         android:padding="10dp"
         android:background="@android:drawable/edit_text" />
 
-    <!-- Service Quick Add Button -->
     <Button
         android:id="@+id/btn_add_wash_fold"
-        android:drawableStart="@drawable/wash_fold"
+        android:drawableStart="@drawable/baseline_water_drop_24"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -34,7 +32,7 @@
 
     <Button
         android:id="@+id/btn_add_wash_iron"
-        android:drawableStart="@drawable/wash_iron"
+        android:drawableStart="@drawable/baseline_local_laundry_service_24"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -42,7 +40,7 @@
 
     <Button
         android:id="@+id/btn_add_iron_only"
-        android:drawableStart="@drawable/iron"
+        android:drawableStart="@drawable/baseline_iron_24"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -50,7 +48,7 @@
 
     <Button
         android:id="@+id/btn_add_shoe_care"
-        android:drawableStart="@drawable/shoe_care"
+        android:drawableStart="@drawable/ic_shoe_care"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -58,7 +56,7 @@
 
     <Button
         android:id="@+id/btn_add_bulk_wash"
-        android:drawableStart="@drawable/bulk_wash"
+        android:drawableStart="@drawable/ic_bulk_wash"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -66,6 +64,7 @@
 
     <Button
         android:id="@+id/btn_add_dry_clean"
+        android:drawableStart="@drawable/baseline_dry_cleaning_24"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"

@@ -7,22 +7,25 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="120dp"
+        android:layout_width="300dp"
+        android:layout_height="180dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/wash_logo"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:text="Less Hassle, More freshness"
-        android:textColor="@color/cardview_dark_background"
-        android:textSize="24sp"
+        android:textColor="@color/brand_primary"
+        android:textSize="22sp"
+        android:fontFamily="@font/lobster_2"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -79,7 +79,9 @@ public class OrdersActivity extends AppCompatActivity {
                         cursor.getInt(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_ID)),
                         cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_SERVICE)),
                         cursor.getDouble(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_PRICE)),
-                        cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_STATUS))
+                        cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_STATUS)),
+                        cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_PRICING_TYPE)),
+                        cursor.getDouble(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_QUANTITY))
                 );
                 orderList.add(order);
             } while (cursor.moveToNext());
@@ -97,7 +99,9 @@ public class OrdersActivity extends AppCompatActivity {
                         cursor.getInt(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_ID)),
                         cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_SERVICE)),
                         cursor.getDouble(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_PRICE)),
-                        cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_STATUS))
+                        cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_STATUS)),
+                        cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_PRICING_TYPE)),
+                        cursor.getDouble(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_QUANTITY))
                 );
                 orderList.add(order);
             } while (cursor.moveToNext());
@@ -136,7 +140,7 @@ public class OrdersActivity extends AppCompatActivity {
             double price = Double.parseDouble(priceStr);
 
             if (order == null) {
-                dbHelper.insertOrder(service, price, status);
+                dbHelper.insertHybridOrder(service, price, "item", 1, status);
                 Toast.makeText(this, R.string.order_added, Toast.LENGTH_SHORT).show();
             } else {
                 dbHelper.updateOrder(order.getId(), service, price, status);
